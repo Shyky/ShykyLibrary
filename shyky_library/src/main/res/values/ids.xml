@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="root_container_id" type="id" />
+    <item name="view_pager_id" type="id" />
+    <item name="checkBox" type="id" />
+    <item name="radioButton" type="id" />
+    <item name="listView" type="id" />
+    <item name="recyclerView" type="id" />
+    <item name="swipeRefreshLayout" type="id" />
+    <item name="fragmentContainer" type="id" />
+    <item name="listContainer" type="id" />
+    <item name="layout_top" type="id" />
+    <item name="layout_left" type="id" />
+    <item name="layout_right" type="id" />
+    <item name="layout_bottom" type="id" />
+    <item name="layout_loading" type="id" />
+    <item name="layout_nothing" type="id" />
+    <item name="layout_failure" type="id" />
+    <item name="appBarLayout" type="id" />
+    <item name="toolbar" type="id" />
+</resources>

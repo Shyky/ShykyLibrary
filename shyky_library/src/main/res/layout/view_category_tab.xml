@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    android:foreground="?attr/selectableItemBackground"
+    android:paddingLeft="@dimen/dp_6"
+    android:paddingRight="@dimen/dp_6">
+
+    <TextView
+        android:id="@+id/category_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:minHeight="@dimen/dp_32"
+        android:paddingBottom="@dimen/dp_4"
+        android:paddingLeft="@dimen/dp_8"
+        android:paddingRight="@dimen/dp_8"
+        android:paddingTop="@dimen/dp_4"
+        android:textColor="@color/color_0e9d57"
+        android:textSize="@dimen/sp_14" />
+</FrameLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_dialog"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:padding="@dimen/dp_10">
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true" />
+    <!--only used in API level 21 and higher-->
+    <!--android:indeterminateTint="@color/color_da6667"-->
+    <!--android:indeterminateTintMode="src_in"-->
+    <TextView
+        android:id="@+id/tv_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginStart="@dimen/dp_10"
+        android:textSize="@dimen/sp_14"
+        android:visibility="gone" />
+</LinearLayout>

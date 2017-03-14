@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--自定义EditText的样式名称及属性-->
+    <declare-styleable name="SmartEditText">
+        <!--是否获取输入焦点-->
+        <attr name="requestFocus" format="boolean" />
+        <!--绑定触发验证的View的资源ID-->
+        <attr name="validateWidget" format="reference" />
+        <!--输入比较的输入框资源ID-->
+        <attr name="validateEqualsWidget" format="reference" />
+        <!--至少输入几位,输入字符个数-->
+        <attr name="validateInputLength" format="integer" />
+        <!--没有输入或输入了空格提示消息文本或资源ID-->
+        <attr name="validateEmptyTip" format="reference|string" />
+        <!--输入指定的格式不合法提示消息文本或资源ID-->
+        <attr name="validateIllegalTip" format="reference|string" />
+        <!--输入字符长度不够提示消息文本或资源ID-->
+        <attr name="validateLengthLessTip" format="reference|string" />
+        <!--输入字符与指定的输入框输入的字符不一致提示消息文本或资源ID-->
+        <attr name="validateNotEqualsTip" format="reference|string" />
+        <!--输入验证枚举-->
+        <attr name="validate">
+            <!--enum只能单选,flag可以多选,属性名称不能和系统的关键字一致,否则无法编译,会造成R文件丢失-->
+            <!--邮箱-->
+            <flag name="email" value="1" />
+            <!--手机号码-->
+            <flag name="phone" value="2" />
+            <!--网址-->
+            <flag name="url" value="4" />
+            <!--数字-->
+            <flag name="number" value="8" />
+            <!--文本,默认-->
+            <flag name="text" value="16" />
+            <!--空白,1个或多个空格-->
+            <flag name="empty" value="32" />
+            <!--输入了null或NULL其中的任意一个,区分每一个字符的大小写-->
+            <flag name="textNull" value="64" />
+            <!--两位以上小数-->
+            <flag name="numberDouble" value="128" />
+            <!--一位小数-->
+            <flag name="numberFloat" value="256" />
+            <!--整数-->
+            <flag name="numberInt" value="512" />
+            <!--正整数-->
+            <flag name="numberSigned" value="1024" />
+            <!--IP地址-->
+            <flag name="ip" value="2048" />
+            <!--输入字符跟别的控件比较-->
+            <flag name="equals" value="4096" />
+        </attr>
+        <!--验证通过触发方式,时提示还是禁用还是其它的-->
+        <attr name="validateMethod">
+            <!--Toast提示-->
+            <enum name="toast" value="0" />
+            <!--Dialog提示-->
+            <enum name="dialog" value="1" />
+            <!--禁用-->
+            <enum name="enable" value="2" />
+            <!--显示或隐藏-->
+            <enum name="visibility" value="3" />
+        </attr>
+        <!--输入格式化-->
+        <attr name="format">
+            <!--不需要格式化-->
+            <enum name="none" value="0" />
+            <!--手机号码,格式为153 0000 2222,前三位后四位隔开-->
+            <enum name="phone" value="1" />
+            <!--银行卡号,格式为每4位隔开-->
+            <enum name="card" value="2" />
+        </attr>
+    </declare-styleable>
+
+    <!--自定义TextView的样式名称及属性-->
+    <declare-styleable name="SmartTextView" />
+
+    <!--自定义Button的样式名称及属性-->
+    <declare-styleable name="SmartButton" />
+
+    <!--自定义ImageView的样式名称及属性-->
+    <declare-styleable name="SmartImageView">
+        <!--缓存图片线程数量，默认为1个线程-->
+        <attr name="cacheThreadCount" format="integer" />
+        <!--缓存路径最大空间，如果已经缓存的图片总占用空间超过这个值将清理时间最早的一部分图片文件，以MB为单位-->
+        <attr name="cacheDirMaxSize" format="integer" />
+        <!--缓存路径最小空间，小于这个值就不启用磁盘缓存，以MB为单位-->
+        <attr name="cacheDirMinSize" format="integer" />
+        <!--缓存图片路径或位置-->
+        <attr name="cacheBitmapPath" format="string" />
+        <!--缓存图片策略，默认使用先进先出-->
+        <attr name="cachePolicy">
+            <enum name="FIFO" value="0" />
+            <enum name="LIFO" value="1" />
+        </attr>
+        <!--图片形状-->
+        <attr name="shape">
+            <enum name="none" value="-1" />
+            <!--圆形-->
+            <enum name="circle" value="0" />
+            <!--方形-->
+            <enum name="square" value="1" />
+        </attr>
+        <!--<attr name="borderWidth" format="dimension" />-->
+        <attr name="borderColor" format="color" />
+        <attr name="borderOverlay" format="boolean" />
+        <attr name="fillColor" format="color" />
+        <attr name="loadingImage" format="reference" />
+        <attr name="failureImage" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="NumberSelectView">
+        <attr name="type" format="integer" />
+        <attr name="count" format="integer" />
+        <attr name="maxCount" format="integer" />
+        <attr name="minCount" format="integer" />
+        <attr name="leftViewBackground" format="reference" />
+        <attr name="rightViewBackground" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="FlowLayout">
+        <attr name="horizontalSpace" format="dimension|reference" />
+        <attr name="verticalSpace" format="dimension|reference" />
+        <attr name="gravity">
+            <enum name="left" value="-1" />
+            <enum name="center" value="0" />
+            <enum name="right" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="TagFlowLayout">
+        <attr name="auto_select_effect" format="boolean" />
+        <!--最大选择标签个数-->
+        <attr name="maxSelectCount" format="integer" />
+        <!--标签选择模式-->
+        <attr name="selectMode">
+            <!--不做选择-->
+            <enum name="none" value="-1" />
+            <!--单选-->
+            <enum name="single" value="0" />
+            <!--多选-->
+            <enum name="multiple" value="1" />
+            <!--选中偶数项-->
+            <enum name="selectEven" value="2" />
+            <!--选中奇数项-->
+            <enum name="selectOdd" value="3" />
+        </attr>
+    </declare-styleable>
+
+    <!--自定义SmartRecyclerView属性-->
+    <declare-styleable name="SmartRecyclerView">
+        <!--分隔线宽度-->
+        <attr name="dividerWidth" format="dimension" />
+        <!--分隔线左边距-->
+        <attr name="divider_marginLeft" format="dimension" />
+        <!--分隔线右边距-->
+        <attr name="divider_marginRight" format="dimension" />
+        <!--分隔线对齐方式-->
+        <attr name="divider_gravity">
+            <!--左对齐-->
+            <enum name="left" value="0" />
+            <!--居中对齐-->
+            <enum name="center" value="1" />
+            <!--右对齐-->
+            <enum name="right" value="2" />
+        </attr>
+        <attr name="emptyView" format="reference" />
+        <!--如果自定义的属性与系统控件的属性同名，加上前缀android:可以解决冲突，注意：不能重新定义format否则无法通过编译-->
+        <!--ListView、GridView、ExpandableListView共同的属性-->
+        <attr name="android:choiceMode" />
+        <attr name="android:listSelector" />
+        <!--继承自ListView属性-->
+        <attr name="android:divider" />
+        <attr name="android:dividerHeight" />
+        <attr name="android:headerDividersEnabled" />
+        <attr name="android:footerDividersEnabled" />
+        <attr name="android:entries" />
+        <!--继承自GridView属性-->
+        <attr name="android:gravity" />
+        <attr name="android:columnWidth" />
+        <attr name="android:horizontalSpacing" />
+        <!--继承自ExpandableListView属性-->
+        <attr name="android:groupIndicator" />
+        <attr name="android:childDivider" />
+        <attr name="android:childIndicator" />
+        <attr name="android:childIndicatorLeft" />
+        <attr name="android:childIndicatorRight" />
+        <attr name="android:childIndicatorEnd" />
+        <attr name="android:childIndicatorStart" />
+    </declare-styleable>
+</resources>

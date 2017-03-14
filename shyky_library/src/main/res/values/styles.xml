@@ -1,0 +1,27 @@
+<resources>
+    <!-- 自定义loading dialog -->
+    <style name="loading_dialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <!--<item name="android:windowBackground">@drawable/white_button_selector</item>-->
+        <!--<item name="android:windowBackground">@drawable/common_bounced</item>-->
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimAmount">0.2</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+    <!-- 自定义布局对话框样式 -->
+    <style name="input_dialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <!-- <item name="android:background">@android:color/white</item>-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.3</item>
+    </style>
+
+
+
+</resources>

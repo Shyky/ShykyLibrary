@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/dp_32"
+    android:background="@drawable/shape_number_bg"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/rl_number_left"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="match_parent"
+        android:clickable="true">
+
+        <TextView
+            android:id="@+id/tv_number_left"
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_20"
+            android:layout_centerInParent="true"
+            android:background="@mipmap/less" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/et_number_center"
+        android:layout_width="@dimen/dp_50"
+        android:layout_height="@dimen/dp_32"
+        android:background="@drawable/shape_number_select_center"
+        android:gravity="center"
+        android:inputType="number"
+        android:lines="1"
+        android:maxLength="5"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/sp_14" />
+
+    <RelativeLayout
+        android:id="@+id/rl_number_right"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="match_parent"
+        android:clickable="true">
+
+        <TextView
+            android:id="@+id/tv_number_right"
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_20"
+            android:layout_centerInParent="true"
+            android:background="@mipmap/add" />
+    </RelativeLayout>
+</LinearLayout>

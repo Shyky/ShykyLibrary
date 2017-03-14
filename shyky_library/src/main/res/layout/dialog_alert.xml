@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_139"
+    android:background="@drawable/shape_dialog"
+    android:padding="@dimen/dp_10">
+
+    <TextView
+        android:id="@+id/tv_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="@dimen/dp_8"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/sp_16"
+        tools:text="aa" />
+
+    <Button
+        android:id="@+id/btn_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="@null"
+        android:text="@string/text_ok"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/sp_16" />
+
+    <Button
+        android:id="@+id/btn_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="@dimen/dp_22"
+        android:layout_toLeftOf="@id/btn_right"
+        android:background="@null"
+        android:text="@string/text_cancel"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/sp_16" />
+</RelativeLayout>
