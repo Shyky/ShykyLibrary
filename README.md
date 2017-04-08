@@ -33,3 +33,21 @@ public void onCreate() {
 
 ### Application入口
 由于shyky_library中某些类依赖BaseApplication这个类，所以需要你的工程下自定义一个Application类并继承com.shyky.library.BaseApplication这个类。
+继承com.shyky.library.BaseApplication需要实现getAppVersion、getBuildType这两个方法，示例：
+```java
+public class MyApplication extends BaseApplication {
+    @NonNull
+    @Override
+    protected String getAppVersion() {
+        return BuildConfig.VERSION_NAME;
+    }
+
+    @NonNull
+    @Override
+    protected String getBuildType() {
+        return BuildConfig.BUILD_TYPE;
+    }
+}
+```
+注意：上面的BuildConfig是你的工程中的BuildConfig类，而不是shyky_library中的BuildConfig类。
+
