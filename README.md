@@ -38,4 +38,14 @@ public class MyApplication extends BaseApplication {
 }
 ```
 注意：上面的BuildConfig是你的工程中的BuildConfig类，而不是shyky_library中的BuildConfig类。
-
+### BaseActivity
+```java
+import com.shyky.library.view.activity.base.BaseActivity;
+public class MainActivity extends BaseActivity {
+    @Override
+    public int getContentViewLayoutResId() {
+        return R.layout.activity_main;
+    }
+}
+```
+不用再写setContentView(R.layout.activity_main)，不要覆盖protected void onCreate(Bundle savedInstanceState)方法。那么在哪初始化view呢？
