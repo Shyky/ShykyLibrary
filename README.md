@@ -39,6 +39,10 @@ public class MyApplication extends BaseApplication {
 ```
 注意：上面的BuildConfig是你的工程中的BuildConfig类，而不是shyky_library中的BuildConfig类。
 ### BaseActivity
+* 增加initData、findView、initView、initListener等方法
+* 简化获取Extra，增加getIntExtra(String name)，
+* 源码注释清楚，代码整齐，命名规范
+* 更多
 ```java
 import com.shyky.library.view.activity.base.BaseActivity;
 public class MainActivity extends BaseActivity {
