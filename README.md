@@ -41,7 +41,7 @@ public class MyApplication extends BaseApplication {
 ### BaseActivity
 * 增加initData、findView、initView、initListener等方法
 * 简化获取Extra，增加getIntExtra(String name)，
-* 源码注释清楚，代码整齐，命名规范
+* 简化Fragment管理，显示、隐藏、替换Fragment更简单
 * 更多
 ```java
 import com.shyky.library.view.activity.base.BaseActivity;
