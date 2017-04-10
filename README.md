@@ -20,7 +20,7 @@ compile 'com.shyky.library:shyky_library:1.3'
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 ```
 ### 初始化
-由于shyky_library中某些类依赖BaseApplication这个类，所以需要你的工程下自定义一个Application类并继承com.shyky.library.BaseApplication这个类，否则使用了某些类会报空指针错误！！！
+由于shyky_library中某些类依赖BaseApplication这个类，所以需要你的工程下自定义一个Application类并继承com.shyky.library.BaseApplication这个类，否则使用了某些类会报空指针异常！！！
 继承com.shyky.library.BaseApplication需要实现getAppVersion、getBuildType这两个方法，示例：
 ```java
 public class MyApplication extends BaseApplication {
@@ -48,4 +48,25 @@ public class MainActivity extends BaseActivity {
     }
 }
 ```
-不用再写setContentView(R.layout.activity_main)，不要覆盖protected void onCreate(Bundle savedInstanceState)方法。那么在哪初始化view呢？
+不用再写setContentView(R.layout.activity_main)，除了在protected void onCreate(Bundle savedInstanceState)方法中初始化view之外，BaseActivity还额外提供了下面三个方法：
+```java
+    @Override
+    public void initData(@NonNull Bundle savedInstanceState) {
+        super.initData(savedInstanceState);
+    }
+
+    @Override
+    public void findView(@NonNull Bundle savedInstanceState) {
+        super.findView(savedInstanceState);
+    }
+
+    @Override
+    public void initView(@NonNull Bundle savedInstanceState) {
+        super.initView(savedInstanceState);
+    }
+
+    @Override
+    public void initListener(@NonNull Bundle savedInstanceState) {
+        super.initListener(savedInstanceState);
+    }
+```
